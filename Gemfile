@@ -34,5 +34,7 @@ end
 group :cucumber do
   gem 'cucumber-rails', '~> 0.3.2', :require => false
   gem 'webrat', '0.5.3', :require => false
+  gem 'launchy', :require => false
+  gem 'database_cleaner',  '~> 0.2.3', :require  => false
 end
 
