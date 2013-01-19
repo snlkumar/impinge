@@ -1,16 +1,15 @@
 source :rubygems
 
 gem 'rails', '~> 2.3.15'
-gem "mysql"
+gem "mysql", '~> 2.7.0'
 gem "rake", '0.9.2'
 
 gem 'will_paginate', '~> 2.3.0'
 
+gem 'mini_magick', '~> 1.3.3'
 gem 'daemons', '1.0.10'
 gem 'delayed_job', '= 2.0.3'
-
 gem 'execjs', '<= 1.2.6'
-
 gem 'jammit'
 gem 'barista', :git => 'https://github.com/Sutto/barista.git', :ref => "eeba1e32d1" 
 group :linux do
