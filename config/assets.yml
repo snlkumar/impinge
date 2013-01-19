@@ -1,0 +1,12 @@
+javascript_compressor: yui
+gzip_assets: off
+
+javascripts:
+  common: []
+
+stylesheets:
+  common:
+    - public/stylesheets/base.css
+    - public/stylesheets/skeleton.css
+    - public/stylesheets/layout.css
+
