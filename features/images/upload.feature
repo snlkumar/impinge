@@ -8,6 +8,6 @@ Feature: Managing images
     Then I should be on the new image page
     When I choose an image to upload
     And I fill in "Caption" with "Test Image"
-    And I press "Upload Image"
+    And I press "Save Image"
     Then I should see "Image created"
     And I should see the image thumbnail
