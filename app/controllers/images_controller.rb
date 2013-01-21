@@ -17,7 +17,7 @@ class ImagesController < ApplicationController
       flash[:success] = "Image created"
       redirect_to images_path
     else
-      flash[:error] = "Unable to save image"
+      flash[:error] = "Unable to save image: #{@image.errors.full_messages.to_sentence}"
       render :new
     end
   end

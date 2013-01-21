@@ -1,0 +1,8 @@
+When /^I choose an image to upload$/ do
+  file = Rails.root.join(*%w[features fixtures trike-logo.jpg])
+  step %|I attach the file "#{file}" to "image[uploaded_data]"|
+end
+
+Then /^I should see the image thumbnail$/ do
+  response.should have_tag(".container img")
+end
