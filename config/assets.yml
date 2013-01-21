@@ -2,7 +2,8 @@ javascript_compressor: yui
 gzip_assets: off
 
 javascripts:
-  common: []
+  common:
+    - public/assets/javascripts/application.js
 
 stylesheets:
   common:
