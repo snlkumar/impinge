@@ -10,3 +10,8 @@ end
 Then /^I should see the image thumbnail$/ do
   response.should have_tag(".container img")
 end
+
+Then /^I should see the featured image$/ do
+  response.should have_tag("#featured_image img")
+end
+
