@@ -12,14 +12,13 @@ development machine:
 
 * [ImageMagick](http://www.imagemagick.org/script/index.php)
 * MySQL (or access to a MySQL server)
-    * Create a database called legacy_app_development
-    * And another called legacy_app_test
 * ruby 1.8.6 or 1.8.7
     * With the bundler gem installed.
 
 Then,
 
-* Clone the repo
+* Clone the repo (including submodules)
+    * `git clone --recursive https://github.com/tricycle/legacy_app.git`
 * cd into repo
 * run `bundle install`
 * `rake db:create db:schema:load`
@@ -29,6 +28,5 @@ Then,
 
 Run the tests with:
 
-* `rake spec`
-* `rake cucumber`
+* `rake spec cucumber`
 
