@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130118051543) do
+ActiveRecord::Schema.define(:version => 20130121030041) do
 
   create_table "delayed_jobs", :force => true do |t|
     t.integer  "priority",   :default => 0
@@ -25,6 +25,15 @@ ActiveRecord::Schema.define(:version => 20130118051543) do
   end
 
   add_index "delayed_jobs", ["priority", "run_at"], :name => "delayed_jobs_priority"
+
+  create_table "featured_images", :force => true do |t|
+    t.datetime "feature_at", :null => false
+    t.integer  "image_id",   :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "featured_images", ["image_id"], :name => "index_featured_images_on_image_id"
 
   create_table "images", :force => true do |t|
     t.integer  "size"
