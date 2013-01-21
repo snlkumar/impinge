@@ -1,0 +1,8 @@
+form.featured_image select {
+  width: auto;
+}
+
+select.datetime {
+  display: inline;
+  margin-bottom: 0;
+}

@@ -1,7 +1,5 @@
 Given /^there is an image$/ do
-  path = Rails.root.join(*%w[features fixtures trike-logo.jpg])
-  data = ActionController::TestUploadedFile.new(path.to_s, 'image/jpeg')
-  @image = Image.make(:uploaded_data => data)
+  @image = Image.make
 end
 
 When /^I choose an image to upload$/ do

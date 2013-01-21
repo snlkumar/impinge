@@ -9,4 +9,5 @@ stylesheets:
     - public/stylesheets/base.css
     - public/stylesheets/skeleton.css
     - public/stylesheets/layout.css
+    - public/stylesheets/application.css
 

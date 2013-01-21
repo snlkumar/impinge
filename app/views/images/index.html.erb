@@ -9,8 +9,12 @@
 <% @images.each do |image| %>
   <div class="four columns">
     <%= image_tag image.public_filename(:small) %>
-    <%= link_to "Edit", edit_image_path(image) %>
-    <%= link_to "Delete", image_path(image), :method => :delete, :confirm => "Are you sure you want to delete this image?" %>
+
+    <div class="controls">
+      <%= link_to "Edit", edit_image_path(image) %>
+      <%= link_to "Feature", new_image_featured_image_path(image) %>
+      <%= link_to "Delete", image_path(image), :method => :delete, :confirm => "Are you sure you want to delete this image?" %>
+    </div>
   </div>
 <% end %>
 

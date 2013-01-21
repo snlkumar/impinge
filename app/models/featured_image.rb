@@ -8,7 +8,7 @@ class FeaturedImage < ActiveRecord::Base
 
   def self.current
     feature_image = self.before_date(Time.now).first(:order => 'feature_at DESC')
-    feature_image.image
+    feature_image.try :image
   end
 
 end

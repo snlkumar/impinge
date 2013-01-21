@@ -14,7 +14,7 @@ class Image < ActiveRecord::Base
                  :thumbnails     => Image.thumbnail_sizes
   validates_as_attachment
 
-  has_many :featured_images
+  has_many :featured_images, :dependent => :destroy
 
   named_scope :parents, :conditions => {:parent_id => nil}
 
