@@ -28,31 +28,40 @@ group :development, :test, :cucumber do
   gem 'debugger'
 end
 gem "rspec",">=2.0.0.beta.5", :group => :test
-group :test do
 gem "webrat"
-gem "rspec-rails",">=2.0.0.beta.5"
-gem "cucumber"
-gem 'capybara', :git => 'git://github.com/jnicklas/capybara.git'
-gem 'database_cleaner', :git => 'git://github.com/bmabey/database_cleaner.git'
-# gem 'cucumber-rails', :git => 'git://github.com/aslakhellesoy/cucumber-rails.git'
+# 
+# group :test do
+# 
+ # gem "cucumber-rails", "1.0.5"
+ # gem 'database_cleaner'
+# # gem 'capybara', :git => 'git://github.com/jnicklas/capybara.git'
+# # gem 'database_cleaner', :git => 'git://github.com/bmabey/database_cleaner.git'
+# # gem 'cucumber-rails', :git => 'git://github.com/aslakhellesoy/cucumber-rails.git'
+# end
+gem 'rspec-rails', :group => [:development, :test]
+group :test do
+  gem 'cucumber-rails'
+  gem 'database_cleaner'
+  gem 'factory_girl_rails'
+  gem 'email_spec'
 end
-group :test, :cucumber do
- 
-   # gem 'rspec-rails', '~> 2.4'
+# group :test, :cucumber do
+#  
+   # # gem 'rspec-rails', '~> 2.4'
+# 
+  # # Version 1.0.3 of machinist from RubyGems.org doesn't work
+  # #
+  # # So this is one downloaded from 'http://gems.github.com'
+  # gem "machinist", '1.0.3', :require => false, :path => 'vendor/github_gems/notahat-machinist-1.0.3'
+  # gem "faker",             "0.3.1", :require => false
+# end
 
-  # Version 1.0.3 of machinist from RubyGems.org doesn't work
-  #
-  # So this is one downloaded from 'http://gems.github.com'
-  gem "machinist", '1.0.3', :require => false, :path => 'vendor/github_gems/notahat-machinist-1.0.3'
-  gem "faker",             "0.3.1", :require => false
-end
-
-group :cucumber do
-   gem 'cucumber-rails', '~> 0.3.2', :require => false
-  # gem 'webrat', '0.5.3', :require => false
-  gem 'launchy', :require => false
-  # gem 'database_cleaner',  '~> 0.2.3', :require  => false
-end
+# group :cucumber do
+   # gem 'cucumber-rails', '~> 0.3.2', :require => false
+  # # gem 'webrat', '0.5.3', :require => false
+  # gem 'launchy', :require => false
+  # # gem 'database_cleaner',  '~> 0.2.3', :require  => false
+# end
 group :development do
   gem 'mongrel', '>= 1.2.0.pre2'
 end
