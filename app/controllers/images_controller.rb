@@ -1,5 +1,5 @@
 class ImagesController < ApplicationController
-
+require 'active_record' 
   before_filter :find_image, :except => [:index, :new, :create]
 
   def index
@@ -12,7 +12,6 @@ class ImagesController < ApplicationController
 
   def create
     @image = Image.new(params[:image])
-
     if @image.save
       flash[:success] = "Image created"
       redirect_to images_path
@@ -22,8 +21,9 @@ class ImagesController < ApplicationController
     end
   end
 
-  # def show
-  # end
+  def show
+    puts "the image is#{@image}"
+  end
 
   def edit
   end

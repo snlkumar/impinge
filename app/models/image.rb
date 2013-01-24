@@ -1,5 +1,4 @@
 class Image < ActiveRecord::Base
-
   cattr_accessor :thumbnail_sizes
   @@thumbnail_sizes = {
     :medium => 512,
@@ -15,7 +14,6 @@ class Image < ActiveRecord::Base
   validates_as_attachment
 
   has_many :featured_images, :dependent => :destroy
-
-  named_scope :parents, :conditions => {:parent_id => nil}
+  scope :parents, :conditions => {:parent_id => nil}
 
 end

@@ -12,6 +12,7 @@ $LOAD_PATH.unshift(File.dirname(vendored_cucumber_bin) + '/../lib') unless vendo
 
 begin
   require 'cucumber/rake/task'
+  Rails.env ||= ActiveSupport::StringInquirer.new('cucumber') #for rails3
 
   namespace :cucumber do
     Cucumber::Rake::Task.new({:ok => 'db:test:prepare'}, 'Run features that should pass') do |t|
