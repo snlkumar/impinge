@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Legacy App
 ==========
 
@@ -30,3 +31,9 @@ Run the tests with:
 
 * `rake spec cucumber`
 
+=======
+impinge
+=======
+
+This is impinge solution repository
+>>>>>>> b5d35d043c282cf4452c161ecb2a2da62197cf92
