@@ -44,10 +44,15 @@ module LegacyApp
 
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password]
-   config.generators do |g|
+    
+     config.generators do |g|
       g.view_specs false
       g.helper_specs false
     end
+    
+    config.generators do |g|
+  g.fixture_replacement :machinist
+end
     # Enable escaping HTML in JSON.
     config.active_support.escape_html_entities_in_json = true
 

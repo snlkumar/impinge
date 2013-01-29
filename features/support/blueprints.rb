@@ -1,3 +1,4 @@
+require 'machinist/active_record'
 Sham.define do
   caption { Faker::Lorem.words(3).join(' ') }
 end
