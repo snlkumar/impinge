@@ -1,7 +1,5 @@
-<<<<<<< HEAD
-Legacy App
-==========
 
+Legacy App
 This is an example rails 2.3 project to use as an exercise in upgrading to
 ruby 1.9 and rails 3. It was derived from an existing project so hopefully
 represents things found in a typical 2.3 app.
@@ -31,9 +29,5 @@ Run the tests with:
 
 * `rake spec cucumber`
 
-=======
-impinge
-=======
-
 This is impinge solution repository
->>>>>>> b5d35d043c282cf4452c161ecb2a2da62197cf92
+
